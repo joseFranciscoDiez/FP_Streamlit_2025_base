@@ -2,10 +2,20 @@ import streamlit as st
 import pandas as pd
 
 class Paciente:
-	def __init__(self, nombre, alergenos):
+	def __init__(self, nombre, restricciones):
 		self.nombre = nombre
 		self.restricciones = restricciones
 		self.historico_dietas = []
+
+	def registrar_dieta(self, dieta):
+        	"""Almacena la dieta en el historial de dietas"""
+        	# Completar 
+        	pass # quita pass cuando lo hayas hecho
+
+    	def dietas_recientes(self, n):
+        	"""Devuelve las últimas n dietas asignadas al paciente."""
+        	# Completar 
+        	pass # quita pass cuando lo hayas hecho
 
 	def __repr__(self):
 		return f"Paciente({self.nombre}, {self.restricciones})"
