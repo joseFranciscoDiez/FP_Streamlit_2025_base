@@ -9,13 +9,12 @@ class Paciente:
 
 	def registrar_dieta(self, dieta):
 		"""Almacena la dieta en el historial de dietas"""
-		# Completar 
-		pass # quita pass cuando lo hayas hecho
+		pass
+		
 
 	def dietas_recientes(self, n):
 		"""Devuelve las últimas n dietas asignadas al paciente."""
-        	# Completar 
-        	pass # quita pass cuando lo hayas hecho
+		pass 
 
 	def __repr__(self):
 		return f"Paciente({self.nombre}, {self.restricciones})"
