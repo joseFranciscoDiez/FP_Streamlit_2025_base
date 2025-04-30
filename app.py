@@ -8,12 +8,12 @@ class Paciente:
 		self.historico_dietas = []
 
 	def registrar_dieta(self, dieta):
-        	"""Almacena la dieta en el historial de dietas"""
-        	# Completar 
-        	pass # quita pass cuando lo hayas hecho
+		"""Almacena la dieta en el historial de dietas"""
+		# Completar 
+		pass # quita pass cuando lo hayas hecho
 
-    	def dietas_recientes(self, n):
-        	"""Devuelve las últimas n dietas asignadas al paciente."""
+	def dietas_recientes(self, n):
+		"""Devuelve las últimas n dietas asignadas al paciente."""
         	# Completar 
         	pass # quita pass cuando lo hayas hecho
 
