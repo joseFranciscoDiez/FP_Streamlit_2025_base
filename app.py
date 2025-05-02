@@ -46,8 +46,17 @@ class CentroSalud:
 		#Es un poco distinto, en este caso se elimina por nombre (no lo cambies)
 		self.pacientes = [p for p in self.pacientes if p.nombre != nombre]
 
-	def asignar_dieta(self):
+	def filtrar_alimentos(self, restricciones):
 		pass
+	
+	def generar_dieta(self,paciente):
+		pass
+		
+	def asignar_dieta(self,paciente):
+		pass
+    
+
+
 
 	def resumen_dietas(self):
 		resumen = {}
