@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import pickle
 
 def calorias_totales(dict_alimentos,alimento):
 	calorias_totales = dict_alimentos[alimento]["Calorías"]*dict_alimentos[alimento]["Porción"] / 100
@@ -65,7 +66,11 @@ class CentroSalud:
 		return pd.DataFrame(resumen)
 
 if "hubu" not in st.session_state:
-	st.session_state.hubu = CentroSalud("HUBU")
+	dict_alimentos = None
+	# Serialize the object to a file
+	with open("alimentos.pickle", "rb") as f:
+		dict_alimentos = pickle.load(f)
+	st.session_state.hubu = CentroSalud("HUBU",dict_alimentos,list(dict_alimentos.keys()))
 
 if "mostrar_formulario_anadir" not in st.session_state:
 	st.session_state.mostrar_formulario_anadir = False
@@ -90,7 +95,8 @@ def main():
        
     
 	if col3.button("Asignar Dieta"):
-		st.session_state.hubu.asignar_dieta()
+		for paciente in st.session_state.hubu.pacientes:
+			st.session_state.hubu.asignar_dieta(paciente)
 		st.success("Dietas asignadas a todos los pacientes.")
 		st.session_state.mostrar_formulario_eliminar = False
 		st.session_state.mostrar_formulario_anadir = False
