@@ -67,7 +67,6 @@ class CentroSalud:
 
 if "hubu" not in st.session_state:
 	dict_alimentos = None
-	# Serialize the object to a file
 	with open("alimentos.pickle", "rb") as f:
 		dict_alimentos = pickle.load(f)
 	st.session_state.hubu = CentroSalud("HUBU",dict_alimentos,list(dict_alimentos.keys()))
