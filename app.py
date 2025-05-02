@@ -1,6 +1,19 @@
 import streamlit as st
 import pandas as pd
 
+def calorias_totales(dict_alimentos,alimento):
+	calorias_totales = dict_alimentos[alimento]["Calorías"]*dict_alimentos[alimento]["Porción"] / 100
+	return calorias_totales
+
+def proteinas_totales(dict_alimentos,alimento):
+	calorias_totales = dict_alimentos[alimento]["Proteínas"]*dict_alimentos[alimento]["Porción"] / 100
+	return calorias_totales
+
+def optimiza_dieta(dict_alimentos, nombres_alimentos):
+	mejor_combinación = []
+	return mejor_combinación
+
+
 class Paciente:
 	def __init__(self, nombre, restricciones):
 		self.nombre = nombre
