@@ -20,16 +20,17 @@ class Paciente:
 		return f"Paciente({self.nombre}, {self.restricciones})"
 
 class CentroSalud:
-	def __init__(self, nombre):
+	def __init__(self, nombre,datos_alimentos,alimentos_disponibles):
 		self.nombre = nombre
 		self.pacientes = []
-		# completa
+		self.datos_alimentos = datos_alimentos
+		self.alimentos_disponibles = alimentos_disponibles
 
 	def agregar_paciente(self, paciente):
 		self.pacientes.append(paciente)
 
 	def eliminar_paciente(self, nombre):
-		# Es un poco distinto, en este caso se elimina por nombre
+		#Es un poco distinto, en este caso se elimina por nombre (no lo cambies)
 		self.pacientes = [p for p in self.pacientes if p.nombre != nombre]
 
 	def asignar_dieta(self):
